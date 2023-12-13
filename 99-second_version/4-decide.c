@@ -16,7 +16,10 @@ int decide_validity(char *str, unsigned int line_num)
 
 		token = strtok(cp, " \t\n");
 		if (!token || strcmp(token, "nop") == 0)
+		{
+			free(cp);
 			return (1);
+		}
 		for (i = 0; orders[i]; i++)
 		{
 			if (strcmp(token, orders[i]) == 0)

@@ -12,6 +12,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num)
 		{
 			token = strtok(NULL, " \n\t");
 			push(head, token);
+			free(cp);
 			return;
 		}
 		else if (strcmp(token, "pall") == 0)

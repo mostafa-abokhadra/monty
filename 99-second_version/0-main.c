@@ -23,5 +23,8 @@ int main(int argc, char **argv)
 			decide_arg_validity(buffer, line_num);
 			decide_execution(buffer, &head, line_num);
 		}
+		free_stack(&head);
+		free(buffer);
+		fclose(fily);
 		return (0);
 }
