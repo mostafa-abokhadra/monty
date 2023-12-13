@@ -15,7 +15,7 @@ int decide_validity(char *str, unsigned int line_num)
 		int i;
 
 		token = strtok(cp, " \t\n");
-		if (!token)
+		if (!token || strcmp(token, "nop") == 0)
 			return (1);
 		for (i = 0; orders[i]; i++)
 		{
