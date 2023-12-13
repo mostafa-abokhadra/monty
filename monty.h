@@ -35,5 +35,6 @@ typedef struct instruction_s
 } instruction_t;
 
 void less_than_two();
+void not_found(char *file_name);
 
 #endif
