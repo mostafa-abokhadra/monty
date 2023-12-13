@@ -46,6 +46,7 @@ void invalid_arg(unsigned int line_num);
 void not_enough();
 void empty_stack(unsigned int line_num);
 void can_not_swap(unsigned int line_num);
+void can_not_add(unsigned int line_num);
 
 void push(stack_t **stack, char *str_num);
 void print(stack_t **stack);
@@ -54,5 +55,5 @@ void decide_arg_validity(char *str, unsigned int line_num);
 void pop(stack_t **head, unsigned int line_num);
 void decide_execution(char *str, stack_t **head, unsigned int line_num);
 void swap(stack_t **head, unsigned int line_num);
-
+void add(stack_t **head, unsigned int line_num);
 #endif

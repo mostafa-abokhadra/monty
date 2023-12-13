@@ -22,6 +22,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num)
 			pop(head, line_num);
 		else if (strcmp(token, "swap") == 0)
 			swap(head, line_num);
+		else if (strcmp(token, "add") == 0)
+			add(head, line_num);
 		free(cp);
 
 }
