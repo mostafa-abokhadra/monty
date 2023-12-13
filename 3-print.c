@@ -6,7 +6,7 @@
  *
  *
  */
-void print(stack_t **stack, unsigned int line_number __attribute__((unused)))
+void print(stack_t **stack)
 {
 		stack_t *t = *(stack);
 

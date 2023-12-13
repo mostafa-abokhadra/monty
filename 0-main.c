@@ -20,7 +20,7 @@ int main(int argc, char **argv)
 			line_num++;
 			decide_validity(buffer, line_num);
 			decide_arg_validity(buffer, line_num);
-			decide_execution(buffer, head, line_num);
+			decide_execution(buffer, &head);
 		}
 		return (0);
 }
