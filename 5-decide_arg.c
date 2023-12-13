@@ -7,7 +7,7 @@ void decide_arg_validity(char *str, unsigned int line_num)
 	bool valid = 1;
 
 	token = strtok(cp, " \n\t$");
-	if (strcmp(token, "pall") != 0)
+	if (strcmp(token, "pall") != 0 && strcmp(token, "pint") != 0)
 	{
 		token = strtok(NULL, " \n\t$");
 		for (; *token ; token++)

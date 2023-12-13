@@ -16,6 +16,8 @@ void decide_execution(char *str, stack_t **head)
 		}
 		else if (strcmp(token, "pall") == 0)
 			print(head);
+		else if (strcmp(token, "pint") == 0)
+			printf("%d\n", (*head)->n);
 		free(cp);
 
 }
