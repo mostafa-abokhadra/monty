@@ -74,3 +74,8 @@ void empty_stack(unsigned int line_num)
 		fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
 		exit(EXIT_FAILURE);
 }
+void can_not_swap(unsigned int line_num)
+{
+		fprintf(stderr, "L%u: can't swap, stack too short\n", line_num);
+		exit(EXIT_FAILURE);
+}

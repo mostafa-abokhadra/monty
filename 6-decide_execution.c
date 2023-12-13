@@ -20,6 +20,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num)
 			printf("%d\n", (*head)->n);
 		else if (strcmp(token, "pop") == 0)
 			pop(head, line_num);
+		else if (strcmp(token, "swap") == 0)
+			swap(head, line_num);
 		free(cp);
 
 }

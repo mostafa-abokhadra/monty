@@ -8,7 +8,7 @@
  */
 int decide_validity(char *str, unsigned int line_num)
 {
-		char *orders[] = {"push", "pall", "pint", "pop", NULL};
+		char *orders[] = {"push", "pall", "pint", "pop", "swap", NULL};
 		char *cp = _strdup(str);
 		char *token;
 		bool valid = 0;
