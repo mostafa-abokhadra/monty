@@ -1,29 +1,30 @@
-#define  _GNU_SOURCE
+#define _GNU_SOURCE
 #include "monty.h"
-/**
- *
- *
- *
- *
- */
+
+stack_t *head = NULL;
+
 int main(int argc, char **argv)
 {
-                unsigned int line_num = 0;
-                size_t size = 0;
-                FILE *fily;
-                char *line = NULL;
+		FILE *fily;
+		unsigned int line_num = 0;
+		char *buffer = NULL;
+		size_t size = 0;
 
-                if (argc < 2)
-                        less_than_two();
-                fily = fopen(argv[1], "r");
-                if (!fily)
-                        not_found(argv[1]);
-                for(; getline(&line, &size, fily) != -1 ;)
-                {
-                        line_num++;
-                        if (execution(line, line_num))
-                                continue;
-                }
-                return (0);
+		if (argc < 2)
+			less_than_2();
+		fily = fopen(argv[1], "r");
+		if (!fily)
+			can_not_open(argv[1]);
+		for (; getline(&buffer, &size, fily) != -1 ;)
+		{
+			line_num++;
+			if (decide_validity(buffer, line_num))
+				continue;
+			decide_arg_validity(buffer, line_num);
+			decide_execution(buffer, &head, line_num);
+		}
+		free_stack(&head);
+		free(buffer);
+		fclose(fily);
+		return (0);
 }
-
