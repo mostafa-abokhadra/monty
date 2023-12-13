@@ -1,9 +1,10 @@
-#ifndef STACK_QUEUE_H
-#define STACK_QUEUE_H
+#ifndef MAIN_H
+#define MAIN_H
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <string.h>
 
 /**
  * struct stack_s - doubly linked list representation of a stack (or queue)
@@ -36,5 +37,9 @@ typedef struct instruction_s
 
 void less_than_two();
 void not_found(char *file_name);
+
+int execution(char *line, unsigned int line_num);
+
+char *_strdup(char *str);
 
 #endif
