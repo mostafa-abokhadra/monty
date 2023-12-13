@@ -47,7 +47,7 @@ void not_enough();
 
 void push(stack_t **stack, char *str_num);
 void print(stack_t **stack);
-void decide_validity(char *str, unsigned int line_num);
+int decide_validity(char *str, unsigned int line_num);
 void decide_arg_validity(char *str, unsigned int line_num);
 void decide_execution(char *str, stack_t **head);
 

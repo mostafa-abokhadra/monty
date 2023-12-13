@@ -6,7 +6,7 @@
  *
  *
  */
-void decide_validity(char *str, unsigned int line_num)
+int decide_validity(char *str, unsigned int line_num)
 {
 		char *orders[] = {"push", "pall", NULL};
 		char *cp = _strdup(str);
@@ -15,6 +15,8 @@ void decide_validity(char *str, unsigned int line_num)
 		int i;
 
 		token = strtok(cp, " \t\n");
+		if (!token)
+			return (1);
 		for (i = 0; orders[i]; i++)
 		{
 			if (strcmp(token, orders[i]) == 0)
@@ -26,4 +28,5 @@ void decide_validity(char *str, unsigned int line_num)
 		free(cp);
 		if (!valid)
 			invalide(line_num, token);
+		return (0);
 }
