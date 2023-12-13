@@ -61,3 +61,16 @@ void not_enough()
 		fprintf(stderr, "Error: malloc failed\n");
 		exit(EXIT_FAILURE);
 }
+
+/**
+ *
+ *
+ *
+ *
+ *
+ */
+void empty_stack(unsigned int line_num)
+{
+		fprintf(stderr, "L%u: can't pop an empty stack\n", line_num);
+		exit(EXIT_FAILURE);
+}

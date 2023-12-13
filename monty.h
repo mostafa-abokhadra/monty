@@ -44,11 +44,14 @@ void can_not_open();
 void invalide(unsigned int line_num, char *opcode);
 void invalid_arg(unsigned int line_num);
 void not_enough();
+void empty_stack(unsigned int line_num);
 
 void push(stack_t **stack, char *str_num);
 void print(stack_t **stack);
 int decide_validity(char *str, unsigned int line_num);
 void decide_arg_validity(char *str, unsigned int line_num);
-void decide_execution(char *str, stack_t **head);
+void pop(stack_t **head, unsigned int line_num);
+void decide_execution(char *str, stack_t **head, unsigned int line_num);
+
 
 #endif

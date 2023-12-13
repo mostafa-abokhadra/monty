@@ -6,7 +6,7 @@ stack_t *head = NULL;
 int main(int argc, char **argv)
 {
 		FILE *fily;
-		int line_num = 0;
+		unsigned int line_num = 0;
 		char *buffer = NULL;
 		size_t size = 0;
 
@@ -21,7 +21,7 @@ int main(int argc, char **argv)
 			if (decide_validity(buffer, line_num))
 				continue;
 			decide_arg_validity(buffer, line_num);
-			decide_execution(buffer, &head);
+			decide_execution(buffer, &head, line_num);
 		}
 		return (0);
 }
