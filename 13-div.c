@@ -13,7 +13,7 @@ void division(stack_t **head, unsigned int line_num, FILE **fily, char *str, cha
 			invalide(str, cp, fily);
 		}
 		t = *(head);
-		(*head)->next->n -= (*head)->n;
+		(*head)->next->n /= (*head)->n;
 		(*head) = (*head)->next;
 		free(t);
 }
