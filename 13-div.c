@@ -6,10 +6,10 @@ void division(stack_t **head, unsigned int line_num, FILE **fily, char *str, cha
 
 		if (!(*head) || !(*head)->next || (*head)->n == 0)
 		{
-			if ((*head)->n == 0)
-				fprintf(stderr, "L%d: division by zero\n", line_num);
-			else
+			if (!(*head) || !(*head)->next)
 				fprintf(stderr, "L%d: can't div, stack too short\n", line_num);
+			else
+				fprintf(stderr, "L%d: division by zero\n", line_num);
 			invalide(str, cp, fily);
 		}
 		t = *(head);

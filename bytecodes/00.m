@@ -1,5 +1,3 @@
-push 10
-push 2
+push 7
+push 0
 div
-pall
-
