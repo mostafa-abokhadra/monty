@@ -31,7 +31,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			mul(head, line_num, fily, str, cp);
 		else if (strcmp(token, "mod") == 0)
 			mod(head, line_num, fily, str, cp);
-		else if (strcmp(token, "mod") == 0)
+		else if (strcmp(token, "pchar") == 0)
 			pchar(head, line_num, fily, str, cp);
 		free(cp);
 

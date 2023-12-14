@@ -1,3 +1,2 @@
-push 7
-push 0
-div
+push 72
+pchar
