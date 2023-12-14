@@ -41,7 +41,7 @@ char *_strdup(char *str);
 
 void less_than_2();
 void can_not_open();
-void invalide(unsigned int line_num, char *opcode, char *cp);
+void invalide(unsigned int line_num, char *opcode, char *cp, char *line);
 void invalid_arg(unsigned int line_num);
 void not_enough();
 void empty_stack(unsigned int line_num);
@@ -50,7 +50,7 @@ void can_not_add(unsigned int line_num);
 
 void push(stack_t **stack, char *str_num);
 void print(stack_t **stack);
-int decide_validity(char *str, unsigned int line_num);
+int decide_validity(char *str, unsigned int line_num, FILE **fily);
 void decide_arg_validity(char *str, unsigned int line_num);
 void pop(stack_t **head, unsigned int line_num);
 void decide_execution(char *str, stack_t **head, unsigned int line_num);

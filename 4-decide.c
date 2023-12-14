@@ -6,7 +6,7 @@
  *
  *
  */
-int decide_validity(char *str, unsigned int line_num)
+int decide_validity(char *str, unsigned int line_num, FILE **fily)
 {
 		char *orders[] = {"push", "pall", "pint", "pop", "swap", "add", NULL};
 		char *cp = _strdup(str);
@@ -29,7 +29,10 @@ int decide_validity(char *str, unsigned int line_num)
 			}
 		}
 		if (!valid)
-			invalide(line_num, token, cp);
+		{
+			fclose(*fily);
+			invalide(line_num, token, cp, str);
+		}
 		free(cp);
 		return (0);
 }

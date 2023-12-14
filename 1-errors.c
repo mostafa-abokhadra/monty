@@ -33,10 +33,12 @@ void can_not_open(char *file_name)
  *
  *
  */
-void invalide(unsigned int line_num, char *opcode, char *cp)
+void invalide(unsigned int line_num, char *opcode, char *cp, char *line)
 {
 		fprintf(stderr, "L%u: unknown instruction %s\n", line_num, opcode);
 		free(cp);
+		free(line);
+		free_stack(&head);
 		exit(EXIT_FAILURE);
 }
 
@@ -49,6 +51,7 @@ void invalide(unsigned int line_num, char *opcode, char *cp)
 void invalid_arg(unsigned int line_num)
 {
 		fprintf(stderr, "L%u: usage: push integer\n", line_num);
+		free_stack(&head);
 		exit(EXIT_FAILURE);
 }
 /**
@@ -60,6 +63,7 @@ void invalid_arg(unsigned int line_num)
 void not_enough()
 {
 		fprintf(stderr, "Error: malloc failed\n");
+		free_stack(&head);
 		exit(EXIT_FAILURE);
 }
 
@@ -78,10 +82,12 @@ void empty_stack(unsigned int line_num)
 void can_not_swap(unsigned int line_num)
 {
 		fprintf(stderr, "L%u: can't swap, stack too short\n", line_num);
+		free_stack(&head);
 		exit(EXIT_FAILURE);
 }
 void can_not_add(unsigned int line_num)
 {
 		fprintf(stderr, "L%u: can't add, stack too short\n", line_num);
+		free_stack(&head);
 		exit(EXIT_FAILURE);
 }

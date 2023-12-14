@@ -18,7 +18,7 @@ int main(int argc, char **argv)
 		for (; getline(&buffer, &size, fily) != -1 ;)
 		{
 			line_num++;
-			if (decide_validity(buffer, line_num))
+			if (decide_validity(buffer, line_num, &fily))
 				continue;
 			decide_arg_validity(buffer, line_num);
 			decide_execution(buffer, &head, line_num);
