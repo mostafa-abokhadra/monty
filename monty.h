@@ -41,7 +41,7 @@ char *_strdup(char *str);
 
 void less_than_2();
 void can_not_open();
-void invalide(unsigned int line_num, char *opcode);
+void invalide(unsigned int line_num, char *opcode, char *cp);
 void invalid_arg(unsigned int line_num);
 void not_enough();
 void empty_stack(unsigned int line_num);
@@ -57,4 +57,5 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num);
 void swap(stack_t **head, unsigned int line_num);
 void add(stack_t **head, unsigned int line_num);
 void free_stack(stack_t **head);
+void pint(stack_t **head);
 #endif

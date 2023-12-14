@@ -33,9 +33,10 @@ void can_not_open(char *file_name)
  *
  *
  */
-void invalide(unsigned int line_num, char *opcode)
+void invalide(unsigned int line_num, char *opcode, char *cp)
 {
 		fprintf(stderr, "L%u: unknown instruction %s\n", line_num, opcode);
+		free(cp);
 		exit(EXIT_FAILURE);
 }
 

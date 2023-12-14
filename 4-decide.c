@@ -28,8 +28,8 @@ int decide_validity(char *str, unsigned int line_num)
 				break;
 			}
 		}
-		free(cp);
 		if (!valid)
-			invalide(line_num, token);
+			invalide(line_num, token, cp);
+		free(cp);
 		return (0);
 }

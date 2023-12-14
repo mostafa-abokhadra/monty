@@ -18,7 +18,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num)
 		else if (strcmp(token, "pall") == 0)
 			print(head);
 		else if (strcmp(token, "pint") == 0)
-			printf("%d\n", (*head)->n);
+			pint(head);
 		else if (strcmp(token, "pop") == 0)
 			pop(head, line_num);
 		else if (strcmp(token, "swap") == 0)
