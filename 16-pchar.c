@@ -10,5 +10,6 @@ void pchar(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *
 				fprintf(stderr, "L%d: can't pchar, value out of range\n", line_num);
 			invalide(str, cp, fily);
 		}
+		if ((*head)->n != 0)
 		printf("%c\n", (*head)->n);
 }
