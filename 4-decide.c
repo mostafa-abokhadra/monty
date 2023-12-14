@@ -16,7 +16,7 @@ int decide_validity(char *str, unsigned int line_num, FILE **fily)
 		int i;
 
 		token = strtok(cp, " \t\n");
-		if (!token || strcmp(token, "nop") == 0)
+		if (!token || strcmp(token, "nop") == 0 || token[0] == '#')
 		{
 			free(cp);
 			return (1);
