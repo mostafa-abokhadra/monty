@@ -5,7 +5,7 @@ void pchar(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *
 		if (!(*head) || !((*head)->n >= 0 && (*head)->n <= 127))
 		{
 			if (!(*head))
-				fprintf(stderr, "L%d: can't pchar, stack empty", line_num);
+				fprintf(stderr, "L%d: can't pchar, stack empty\n", line_num);
 			else
 				fprintf(stderr, "L%d: can't pchar, value out of range\n", line_num);
 			invalide(str, cp, fily);
