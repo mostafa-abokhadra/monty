@@ -20,8 +20,8 @@ int main(int argc, char **argv)
 			line_num++;
 			if (decide_validity(buffer, line_num, &fily))
 				continue;
-			decide_arg_validity(buffer, line_num);
-			decide_execution(buffer, &head, line_num);
+			decide_arg_validity(buffer, line_num, &fily);
+			decide_execution(buffer, &head, line_num, &fily);
 		}
 		free_stack(&head);
 		free(buffer);

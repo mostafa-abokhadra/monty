@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void decide_execution(char *str, stack_t **head, unsigned int line_num)
+void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **fily)
 {
 		char *token;
 		char *cp;
@@ -11,20 +11,20 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num)
 		if (strcmp(token, "push") == 0)
 		{
 			token = strtok(NULL, " \n\t");
-			push(head, token);
-			free(cp);
-			return;
+			push(head, token, cp, str, fily);
+			/*free(cp);
+			return;*/
 		}
 		else if (strcmp(token, "pall") == 0)
 			print(head);
 		else if (strcmp(token, "pint") == 0)
 			pint(head);
 		else if (strcmp(token, "pop") == 0)
-			pop(head, line_num);
+			pop(head, line_num, fily, str, cp);
 		else if (strcmp(token, "swap") == 0)
-			swap(head, line_num);
+			swap(head, line_num, fily, str, cp);
 		else if (strcmp(token, "add") == 0)
-			add(head, line_num);
+			add(head, line_num, fily, str, cp);
 		free(cp);
 
 }

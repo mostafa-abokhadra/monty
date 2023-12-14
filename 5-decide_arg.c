@@ -1,6 +1,6 @@
 #include "monty.h"
 
-void decide_arg_validity(char *str, unsigned int line_num)
+void decide_arg_validity(char *str, unsigned int line_num, FILE **fily)
 {
 	char *token;
 	char *cp = _strdup(str);
@@ -19,5 +19,5 @@ void decide_arg_validity(char *str, unsigned int line_num)
 	}
 	free(cp);
 	if (!valid)
-		invalid_arg(line_num);
+		invalid_arg(line_num, str, fily);
 }
