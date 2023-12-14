@@ -29,6 +29,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			division(head, line_num, fily, str, cp);
 		else if (strcmp(token, "mul") == 0)
 			mul(head, line_num, fily, str, cp);
+		else if (strcmp(token, "mod") == 0)
+			mod(head, line_num, fily, str, cp);
 		free(cp);
 
 }

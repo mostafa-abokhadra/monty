@@ -56,5 +56,6 @@ void pint(stack_t **head);
 void sub(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void division(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void mul(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
+void mod(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 
 #endif
