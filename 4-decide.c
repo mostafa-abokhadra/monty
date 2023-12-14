@@ -9,7 +9,7 @@
 int decide_validity(char *str, unsigned int line_num, FILE **fily)
 {
 		char *orders[] = {"push", "pall", "pint", "pop", "swap",
-			"add","sub", "div", NULL};
+			"add","sub", "div", "mul", NULL};
 		char *cp = _strdup(str);
 		char *token;
 		bool valid = 0;
