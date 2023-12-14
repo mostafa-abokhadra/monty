@@ -54,4 +54,6 @@ void add(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp
 void free_stack(stack_t **head);
 void pint(stack_t **head);
 void sub(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
+void division(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
+
 #endif

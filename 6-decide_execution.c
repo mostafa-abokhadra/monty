@@ -25,6 +25,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			add(head, line_num, fily, str, cp);
 		else if (strcmp(token, "sub") == 0)
 			sub(head, line_num, fily, str, cp);
+		else if (strcmp(token, "div") == 0)
+			division(head, line_num, fily, str, cp);
 		free(cp);
 
 }
