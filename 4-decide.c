@@ -8,7 +8,7 @@
  */
 int decide_validity(char *str, unsigned int line_num, FILE **fily)
 {
-		char *orders[] = {"push", "pall", "pint", "pop", "swap", "add", NULL};
+		char *orders[] = {"push", "pall", "pint", "pop", "swap", "add","sub", NULL};
 		char *cp = _strdup(str);
 		char *token;
 		bool valid = 0;
@@ -30,8 +30,8 @@ int decide_validity(char *str, unsigned int line_num, FILE **fily)
 		}
 		if (!valid)
 		{
-			fclose(*fily);
-			invalide(line_num, token, cp, str);
+			fprintf(stderr, "L%u: unknown instruction %s\n", line_num, token);
+			invalide(cp, str, fily);
 		}
 		free(cp);
 		return (0);

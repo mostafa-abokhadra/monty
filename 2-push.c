@@ -12,7 +12,10 @@ void push(stack_t **stack, char *str_num, char *cp, char *line, FILE **fily)
 	int num;
 
 	if (!new_node)
-		not_enough(fily, cp, line);
+	{
+		fprintf(stderr, "Error: malloc failed\n");
+		invalide(cp, line, fily);
+	}
 	num = atoi(str_num);
 	new_node->n = num;
 	new_node->next = *(stack);

@@ -41,12 +41,7 @@ char *_strdup(char *str);
 
 void less_than_2();
 void can_not_open();
-void invalide(unsigned int line_num, char *opcode, char *cp, char *line);
-void invalid_arg(unsigned int line_num, char *line, FILE **fily);
-void not_enough(FILE **fily, char *cp, char *line);
-void empty_stack(unsigned int line_num, FILE **fily, char *str, char *cp);
-void can_not_swap(unsigned int line_num, FILE **fily, char *str, char *cp);
-void can_not_add(unsigned int line_num, FILE **fily, char *str, char *cp);
+void invalide(char *cp, char *line, FILE **fily);
 
 void push(stack_t **stack, char *str_num, char *cp, char *line, FILE **fily);
 void print(stack_t **stack);
@@ -58,4 +53,5 @@ void swap(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *c
 void add(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void free_stack(stack_t **head);
 void pint(stack_t **head);
+void sub(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 #endif

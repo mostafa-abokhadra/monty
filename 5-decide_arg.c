@@ -25,8 +25,11 @@ void decide_arg_validity(char *str, unsigned int line_num, FILE **fily)
 		}
 	}
 	out:
-	free(cp);
 	if (!valid)
-		invalid_arg(line_num, str, fily);
+	{
+		fprintf(stderr, "L%u: usage: push integer\n", line_num);
+		invalide(str, cp, fily);
+	}
+	free(cp);
 
 }

@@ -12,8 +12,6 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 		{
 			token = strtok(NULL, " \n\t");
 			push(head, token, cp, str, fily);
-			/*free(cp);
-			return;*/
 		}
 		else if (strcmp(token, "pall") == 0)
 			print(head);
@@ -25,6 +23,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			swap(head, line_num, fily, str, cp);
 		else if (strcmp(token, "add") == 0)
 			add(head, line_num, fily, str, cp);
+		else if (strcmp(token, "sub") == 0)
+			sub(head, line_num, fily, str, cp);
 		free(cp);
 
 }
