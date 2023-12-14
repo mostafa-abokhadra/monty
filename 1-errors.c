@@ -51,8 +51,8 @@ void invalide(unsigned int line_num, char *opcode, char *cp, char *line)
 void invalid_arg(unsigned int line_num, char *line, FILE **fily)
 {
 		fprintf(stderr, "L%u: usage: push integer\n", line_num);
-		free_stack(&head);
 		free(line);
+		free_stack(&head);
 		fclose(*fily);
 		exit(EXIT_FAILURE);
 }
