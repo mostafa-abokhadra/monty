@@ -33,6 +33,8 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			mod(head, line_num, fily, str, cp);
 		else if (strcmp(token, "pchar") == 0)
 			pchar(head, line_num, fily, str, cp);
+		else if (strcmp(token, "pstr") == 0)
+			pstr(head, fily, str, cp);
 		free(cp);
 
 }
