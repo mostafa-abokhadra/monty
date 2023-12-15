@@ -60,4 +60,6 @@ void mul(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp
 void mod(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void pchar(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void pstr(stack_t **head, FILE **fily, char *str, char *cp);
+void rotl(stack_t **head, FILE **fily, char *cp, char *line);
+
 #endif
