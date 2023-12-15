@@ -16,7 +16,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 		else if (strcmp(token, "pall") == 0)
 			print(head);
 		else if (strcmp(token, "pint") == 0)
-			pint(head);
+			pint(head, str, cp, fily, line_num);
 		else if (strcmp(token, "pop") == 0)
 			pop(head, line_num, fily, str, cp);
 		else if (strcmp(token, "swap") == 0)

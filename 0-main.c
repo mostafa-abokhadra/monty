@@ -3,6 +3,14 @@
 
 stack_t *head = NULL;
 
+/**
+ * main - entry point
+ * @argc: arg count
+ * @argv: list of args
+ *
+ * Description: entry to pocodes
+ * Return: 0
+ */
 int main(int argc, char **argv)
 {
 		FILE *fily;

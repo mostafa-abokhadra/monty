@@ -15,6 +15,7 @@
 #include <string.h>
 #include <stdbool.h>
 
+
 typedef struct stack_s
 {
         int n;
@@ -53,7 +54,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 void swap(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void add(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void free_stack(stack_t **head);
-void pint(stack_t **head);
+void pint(stack_t **head, char *str, char *cp, FILE **fily, unsigned int line_num);
 void sub(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void division(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
 void mul(stack_t **head, unsigned int line_num, FILE **fily, char *str, char *cp);
