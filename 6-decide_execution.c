@@ -37,5 +37,7 @@ void decide_execution(char *str, stack_t **head, unsigned int line_num, FILE **f
 			pstr(head, fily, str, cp);
 		else if (strcmp(token, "rotl") == 0)
 			rotl(head, fily, str, cp);
+		else if (strcmp(token, "rotr") == 0)
+			rotr(head, fily, str, cp);
 		free(cp);
 }
